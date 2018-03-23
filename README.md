@@ -1,7 +1,6 @@
 We plan to upload 'learned network for NTIRE competition (CVPRW 2018)' to other places due to capacity.
-# Title : Efiti
+# Title : Efficient Module Based SR for multiple problems 
 # EMBSR
-EMBSR
 # Dependencies
 Python (Tested with 3.6)
 PyTorch >= 0.3.1
@@ -13,7 +12,8 @@ UM and the authors make all the usual disclaimers about liability etc.
 If you make changes to any files, then please change the file name before redistributing to avoid confusion (like the GNU software license). Better yet, email me the changes and I'll consider incorporating them into the toolbox.
 
 
-
+We get a lot of help from the site below.
+https://github.com/thstkdgus35/EDSR-PyTorch
 # Reference
 [1] Bee Lim, Sanghyun Son, Heewon Kim, Seungjun Nah, and Kyoung Mu Lee, **"Enhanced Deep Residual Networks for Single Image Super-Resolution,"** <i>2nd NTIRE: New Trends in Image Restoration and Enhancement workshop and challenge on image super-resolution in conjunction with **CVPR 2017**. </i> [[PDF](http://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.pdf)] [[arXiv](https://arxiv.org/abs/1707.02921)] [[Slide](https://cv.snu.ac.kr/research/EDSR/Presentation_v3(release).pptx)]
 ```
