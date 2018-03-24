@@ -1,0 +1,43 @@
+# EDSR baseline model (x2)
+#python main.py --model EDSR --scale 2 --save EDSR_baseline_x2 --reset
+
+# EDSR baseline model (x3) - requires pre-trained EDSR baseline x2 model
+#python main.py --model EDSR --scale 3 --save EDSR_baseline_x3 --reset --pre_train ../experiment/model/EDSR_baseline_x4.pt
+
+# EDS R baseline model (x4) - requires pre-trained EDSR baseline x2 model
+#### 8 to 1
+#python main.py --model EDSR --scale 8 --save EDSR_Fulltrain_x8_1_0210 --reset --pre_train_1 ../experiment/EDSR_baseline_x2_1/model/model_183.pt  --pre_train_2 ../experiment/EDSR_baseline_x4_2/model/model_268.pt --pre_train_3 ../experiment/EDSR_baseline_x8_4/model/model_297.pt
+
+
+#### 8 to4 + 4to 2 + 2 to 1
+python main.py --model EDSR --scale 8 --save EDSR_Fulltrain_x8_1_0211 --reset --pre_train_1 ../experiment/EDSR_baseline_x2_1/model/model_183.pt  --pre_train_2 ../experiment/EDSR_baseline_x4_2/model/model_268.pt --pre_train_3 ../experiment/EDSR_baseline_x8_4/model/model_297.pt
+
+
+#python main.py --save EDSR_baseline_x8_4 --reset --fullInputScale 8 --fullTargetScale 4 --patch_mult 0.5 --n_GPU_number 2 #0123
+
+#python main.py --save EDSR_baseline_x4_2 --reset --fullInputScale 4 --fullTargetScale 2 --patch_mult 0.5 --n_GPU_number 1 #0123
+
+#python main.py --save EDSR_baseline_x2_1 --reset --fullInputScale 2 --fullTargetScale 1 --patch_mult 1 --n_GPU_number 3 #0123
+
+
+
+# EDSR in the paper (x2)
+#python main.py --model EDSR --scale 2 --save EDSR_x2 --n_resblocks 32 --n_feats 256 --res_scale 0.1 --reset
+
+# EDSR in the paper (x3) - requires pre-trained EDSR baseline x2 model
+#python main.py --model EDSR --scale 3 --save EDSR_x3 --n_resblocks 32 --n_feats 256 --res_scale 0.1 --reset --pre_train ../experiment/EDSR_x2/model/model_lastest.pt
+
+# EDSR in the paper (x4) - requires pre-trained EDSR baseline x2 model
+#python main.py --model EDSR --scale 4 --save EDSR_x4 --n_resblocks 32 --n_feats 256 --res_scale 0.1 --reset --pre_train ../experiment/EDSR_x2/model/model_lastest.pt
+
+# MDSR baseline model
+#python main.py --template MDSR --model MDSR --scale 2+3+4 --save MDSR_baseline --reset
+
+# MDSR in the paper
+#python main.py --template MDSR --model MDSR --scale 2+3+4 --save MDSR --n_resblocks 80 --reset
+
+# Test your own images
+#python main.py --scale 4 --data_test MyImage --test_only --save_results --pre_train ../experiment/model/EDSR_baseline_x4.pt --chop_forward
+
+#Advanced - JPEG artifact removal
+#python main.py --template MDSR_jpeg --model MDSR --scale 2+3+4 --save MDSR_jpeg --quality 75+ --reset
