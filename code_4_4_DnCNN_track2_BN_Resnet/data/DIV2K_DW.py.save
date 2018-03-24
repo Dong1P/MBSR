@@ -1,0 +1,1283 @@
+Last login: Wed Feb 21 21:52:28 on ttys002
+Ses-Mac-mini-3:~ kykim$ ssh kky@10.20.13.1
+kky@10.20.13.1's password: 
+Permission denied, please try again.
+kky@10.20.13.1's password: 
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 4.2.0-27-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Wed Feb 21 21:52:40 KST 2018
+
+  System load:  0.0                 Processes:          431
+  Usage of /:   94.9% of 410.48GB   Users logged in:    1
+  Memory usage: 3%                  IP address for em1: 10.20.13.1
+  Swap usage:   0%
+
+  => / is using 94.9% of 410.48GB
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+35 packages can be updated.
+26 updates are security updates.
+
+New release '16.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+WARNING: Security updates for your current Hardware Enablement Stack
+ended on 2016-08-04:
+ * http://wiki.ubuntu.com/1404_HWE_EOL
+
+There is a graphics stack installed on this system. An upgrade to a
+configuration supported for the full lifetime of the LTS will become
+available on 2016-07-21 and can be installed by running 'update-manager'
+in the Dash.
+    
+Last login: Wed Feb 21 21:52:40 2018 from 10.20.16.250
+kky@ubuntu:~$ cd -bash: cannot create temp file for here-document: No space left on device
+-bash: cannot create temp file for here-document: No space left on device
+-bash: cannot create temp file for here-document: No space left on device
+-bash: cannot create temp file for here-document: No space left on device
+-bash: cannot create temp file for here-document: No space left on device
+kky@ubuntu:~$ cd 
+kky@ubuntu:~$ for i in /home/*; do echo $i; find $i |wc -l; done
+/home/hanvit
+find: `/home/hanvit/.cache': Permission denied
+6
+/home/kky
+168607
+/home/sychun
+find: `/home/sychun/.nv': Permission denied
+find: `/home/sychun/.pki': Permission denied
+find: `/home/sychun/.gconf': Permission denied
+find: `/home/sychun/.config': Permission denied
+find: `/home/sychun/.dbus': Permission denied
+find: `/home/sychun/.cache': Permission denied
+find: `/home/sychun/irt/contrib/Gblur2': Permission denied
+find: `/home/sychun/.local': Permission denied
+find: `/home/sychun/.matlab/R2017a/HtmlPanel/cache/Local Storage': Permission denied
+find: `/home/sychun/.matlab/R2017a/HtmlPanel/cache/GPUCache': Permission denied
+4229
+/home/thanh
+find: `/home/thanh/.nv': Permission denied
+find: `/home/thanh/.gconf': Permission denied
+find: `/home/thanh/.config/ibus': Permission denied
+find: `/home/thanh/.dbus': Permission denied
+find: `/home/thanh/.cache': Permission denied
+find: `/home/thanh/.ssh': Permission denied
+55448
+/home/user
+find: `/home/user/.cache': Permission denied
+6
+kky@ubuntu:~$ ls
+anaconda3  Anaconda3-5.0.1-Linux-x86_64.sh  code_8_1  Dongwon  examples.desktop  kky  SuperResolution
+kky@ubuntu:~$ cd kky
+kky@ubuntu:~/kky$ LS
+The program 'LS' is currently not installed. To run 'LS' please ask your administrator to install the package 'sl'
+kky@ubuntu:~/kky$ ls
+ntire2018_kky
+kky@ubuntu:~/kky$ cd ntire2018_kky/
+kky@ubuntu:~/kky/ntire2018_kky$ ls
+EDSR-PyTorch-master
+kky@ubuntu:~/kky/ntire2018_kky$ cd EDSR-PyTorch-master/
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master$ LS
+The program 'LS' is currently not installed. To run 'LS' please ask your administrator to install the package 'sl'
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master$ ls
+code  code_8_1  experiment  README.md  test
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master$ cd code
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ ls
+data           dataloader.pyc  demo.sh.save    __init__.py  main.py  option.py   preTrainer.py   preTrainer.pynano.save  preTrainer.py.save.1  template.py   tools       trainer.pyc  utils.pyc
+dataloader.py  demo.sh         demo.sh.save.1  loss         model    option.pyc  preTrainer.pyc  preTrainer.py.save      __pycache__           template.pyc  trainer.py  utils.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ nano demo.sh
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ sh demo.sh
+Preparing binary packages...
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_HR/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X8/pack.pt
+Traceback (most recent call last):
+  File "main.py", line 15, in <module>
+    my_loader = data(args).get_loader()
+  File "/home/kky/kky/ntire2018_kky/EDSR-PyTorch-master/code/data/__init__.py", line 16, in get_loader
+    self.module_train, self.args.data_train)(self.args)
+  File "/home/kky/kky/ntire2018_kky/EDSR-PyTorch-master/code/data/DIV2K_DW.py", line 50, in __init__
+    self.pack_in.append(torch.load(name_in))
+  File "/home/kky/anaconda3/lib/python3.6/site-packages/torch/serialization.py", line 259, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X8/pack.pt'
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ cd data
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code/data$ ls
+common_DW.py  common_DW.pyc  common_DW.py.save  common_DW.py.save.1  common.py  DIV2K_DW.py  DIV2K_DW.pyc  DIV2K_jpeg.py  DIV2K.py  __init__.py  __init__.pyc  main_2.py  MyImage.py  __pycache__
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code/data$ nano DIV2K_DW.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code/data$ cd ~
+kky@ubuntu:~$ ls
+anaconda3  Anaconda3-5.0.1-Linux-x86_64.sh  code_8_1  Dongwon  examples.desktop  kky  SuperResolution
+kky@ubuntu:~$ cd Dongwon/SuperResolution/Data
+kky@ubuntu:~/Dongwon/SuperResolution/Data$ ls
+MatlabStudy  NTIRE  Ntire2018  Set14  Set5  Urban100
+kky@ubuntu:~/Dongwon/SuperResolution/Data$ cd NTIRE/
+kky@ubuntu:~/Dongwon/SuperResolution/Data/NTIRE$ cd ~
+kky@ubuntu:~$ cd Dongwon/ntire2018/EDSR-PyTorch-master/
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master$ ls
+code  code_8_1  experiment  README.md  test
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master$ cd code
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master/code$ cd ..
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master$ cd code_8_1/
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master/code_8_1$ cd tools
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master/code_8_1/tools$ nano png2binary.py 
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master/code_8_1/tools$ cd ..
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master/code_8_1$ cd..
+cd..: command not found
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master/code_8_1$ cd ..
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master$ cd code/tools
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master/code/tools$ nano png2binary.py 
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master/code/tools$ python png2binary.py 
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_wavelet
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_wavelet/X8
+Converted 100 images.
+Converted 200 images.
+Converted 300 images.
+Converted 400 images.
+Converted 500 images.
+Converted 600 images.
+Converted 700 images.
+Converted 800 images.
+Converted 900 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_wavelet/X4
+Converted 100 images.
+Converted 200 images.
+Converted 300 images.
+Converted 400 images.
+Converted 500 images.
+Converted 600 images.
+Converted 700 images.
+Converted 800 images.
+Converted 900 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_wavelet/X2
+Converted 100 images.
+Converted 200 images.
+Converted 300 images.
+Converted 400 images.
+Converted 500 images.
+Converted 600 images.
+Converted 700 images.
+Converted 800 images.
+Converted 900 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_test_LR_bicubic
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_test_LR_bicubic/X8
+Converted 100 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_test_LR_bicubic/X3
+Converted 100 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_test_LR_bicubic/X4
+Converted 100 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_test_LR_bicubic/X2
+Converted 100 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_LR_unknown
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_LR_unknown/X3
+Converted 100 images.
+Converted 200 images.
+Converted 300 images.
+Converted 400 images.
+Converted 500 images.
+Converted 600 images.
+Converted 700 images.
+Converted 800 images.
+Converted 900 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_LR_unknown/X2
+Converted 100 images.
+Converted 200 images.
+Converted 300 images.
+Converted 400 images.
+Converted 500 images.
+Converted 600 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_LR_bicubic
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_LR_bicubic/X8
+Converted 100 images.
+Converted 200 images.
+Converted 300 images.
+Converted 400 images.
+Converted 500 images.
+Converted 600 images.
+Converted 700 images.
+Converted 800 images.
+Converted 900 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_LR_bicubic/X3
+Converted 100 images.
+Converted 200 images.
+Converted 300 images.
+Converted 400 images.
+Converted 500 images.
+Converted 600 images.
+Converted 700 images.
+Converted 800 images.
+Converted 900 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_LR_bicubic/X4
+Converted 100 images.
+Converted 200 images.
+Converted 300 images.
+Converted 400 images.
+Converted 500 images.
+Converted 600 images.
+Converted 700 images.
+Converted 800 images.
+Converted 900 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_LR_bicubic/X2
+Converted 100 images.
+Converted 200 images.
+Converted 300 images.
+Converted 400 images.
+Converted 500 images.
+Converted 600 images.
+Converted 700 images.
+Converted 800 images.
+Converted 900 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_train_HR
+Converted 100 images.
+Converted 200 images.
+Converted 300 images.
+Converted 400 images.
+Converted 500 images.
+Converted 600 images.
+Converted 700 images.
+Converted 800 images.
+Converted 900 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_test_LR_unknown
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_test_LR_unknown/X8
+Converted 100 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_test_LR_unknown/X3
+Converted 100 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_test_LR_unknown/X4
+Converted 100 images.
+Saved pt binary.
+/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K/DIV2K_test_LR_unknown/X2
+Converted 100 images.
+Saved pt binary.
+kky@ubuntu:~/Dongwon/ntire2018/EDSR-PyTorch-master/code/tools$ cd ~
+kky@ubuntu:~$ cd kky
+kky@ubuntu:~/kky$ ls
+ntire2018_kky
+kky@ubuntu:~/kky$ cd ntire2018_kky/
+kky@ubuntu:~/kky/ntire2018_kky$ ls
+EDSR-PyTorch-master
+kky@ubuntu:~/kky/ntire2018_kky$ cd EDSR-PyTorch-master/
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master$ cd code
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ ls
+data           dataloader.pyc  demo.sh.save    __init__.py  main.py  option.py   preTrainer.py   preTrainer.pynano.save  preTrainer.py.save.1  template.py   tools       trainer.pyc  utils.pyc
+dataloader.py  demo.sh         demo.sh.save.1  loss         model    option.pyc  preTrainer.pyc  preTrainer.py.save      __pycache__           template.pyc  trainer.py  utils.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ nano demo.sh
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ sh demo.sh
+Preparing binary packages...
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_HR/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X8/pack.pt
+Traceback (most recent call last):
+  File "main.py", line 15, in <module>
+    my_loader = data(args).get_loader()
+  File "/home/kky/kky/ntire2018_kky/EDSR-PyTorch-master/code/data/__init__.py", line 16, in get_loader
+    self.module_train, self.args.data_train)(self.args)
+  File "/home/kky/kky/ntire2018_kky/EDSR-PyTorch-master/code/data/DIV2K_DW.py", line 50, in __init__
+    self.pack_in.append(torch.load(name_in))
+  File "/home/kky/anaconda3/lib/python3.6/site-packages/torch/serialization.py", line 259, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X8/pack.pt'
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ sh demo.sh
+Preparing binary packages...
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_HR/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X8/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X4/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X2/pack.pt
+Preparing binary packages...
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_HR/packv.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X8/packv.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X4/packv.pt
+Traceback (most recent call last):
+  File "main.py", line 15, in <module>
+    my_loader = data(args).get_loader()
+  File "/home/kky/kky/ntire2018_kky/EDSR-PyTorch-master/code/data/__init__.py", line 25, in get_loader
+    self.args, train=False)
+  File "/home/kky/kky/ntire2018_kky/EDSR-PyTorch-master/code/data/DIV2K_DW.py", line 59, in __init__
+    self.pack_in.append(torch.load(name_in))
+  File "/home/kky/anaconda3/lib/python3.6/site-packages/torch/serialization.py", line 259, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X4/packv.pt'
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ cd data
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code/data$ nano DIV2K_DW.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code/data$ cd ..
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ sh demo.sh
+Preparing binary packages...
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_HR/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X8/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X4/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X2/pack.pt
+Preparing binary packages...
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_HR/packv.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X8/packv.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X4/packv.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X2/packv.pt
+Making model...
+Loading model from ../experiment/EDSR_baseline_x2_1/model/model_183.pt...
+Loading model from ../experiment/EDSR_baseline_x4_2/model/model_268.pt...
+Loading model from ../experiment/EDSR_baseline_x8_4/model/model_297.pt...
+sub_mean.weight
+11
+sub_mean.bias
+11
+add_mean.weight
+11
+add_mean.bias
+11
+head.0.weight
+11
+head.0.bias
+11
+body.0.body.0.weight
+11
+body.0.body.0.bias
+11
+body.0.body.2.weight
+11
+body.0.body.2.bias
+11
+body.1.body.0.weight
+11
+body.1.body.0.bias
+11
+body.1.body.2.weight
+11
+body.1.body.2.bias
+11
+body.2.body.0.weight
+11
+body.2.body.0.bias
+11
+body.2.body.2.weight
+11
+body.2.body.2.bias
+11
+body.3.body.0.weight
+11
+body.3.body.0.bias
+11
+body.3.body.2.weight
+11
+body.3.body.2.bias
+11
+body.4.body.0.weight
+11
+body.4.body.0.bias
+11
+body.4.body.2.weight
+11
+body.4.body.2.bias
+11
+body.5.body.0.weight
+11
+body.5.body.0.bias
+11
+body.5.body.2.weight
+11
+body.5.body.2.bias
+11
+body.6.body.0.weight
+11
+body.6.body.0.bias
+11
+body.6.body.2.weight
+11
+body.6.body.2.bias
+11
+body.7.body.0.weight
+11
+body.7.body.0.bias
+11
+body.7.body.2.weight
+11
+body.7.body.2.bias
+11
+body.8.body.0.weight
+11
+body.8.body.0.bias
+11
+body.8.body.2.weight
+11
+body.8.body.2.bias
+11
+body.9.body.0.weight
+11
+body.9.body.0.bias
+11
+body.9.body.2.weight
+11
+body.9.body.2.bias
+11
+body.10.body.0.weight
+11
+body.10.body.0.bias
+11
+body.10.body.2.weight
+11
+body.10.body.2.bias
+11
+body.11.body.0.weight
+11
+body.11.body.0.bias
+11
+body.11.body.2.weight
+11
+body.11.body.2.bias
+11
+body.12.body.0.weight
+11
+body.12.body.0.bias
+11
+body.12.body.2.weight
+11
+body.12.body.2.bias
+11
+body.13.body.0.weight
+11
+body.13.body.0.bias
+11
+body.13.body.2.weight
+11
+body.13.body.2.bias
+11
+body.14.body.0.weight
+11
+body.14.body.0.bias
+11
+body.14.body.2.weight
+11
+body.14.body.2.bias
+11
+body.15.body.0.weight
+11
+body.15.body.0.bias
+11
+body.15.body.2.weight
+11
+body.15.body.2.bias
+11
+body.16.weight
+11
+body.16.bias
+11
+tail.0.0.features.0.1.weight
+11
+tail.0.0.features.0.1.bias
+11
+tail.0.0.features.1.1.weight
+11
+tail.0.0.features.1.1.bias
+11
+tail.0.0.features.2.1.weight
+11
+tail.0.0.features.2.1.bias
+11
+tail.0.1.weight
+11
+tail.0.1.bias
+11
+tail.1.weight
+11
+tail.1.bias
+11
+head_2.0.weight
+22
+head_2.0.bias
+22
+body_2.0.body.0.weight
+22
+body_2.0.body.0.bias
+22
+body_2.0.body.2.weight
+22
+body_2.0.body.2.bias
+22
+body_2.1.body.0.weight
+22
+body_2.1.body.0.bias
+22
+body_2.1.body.2.weight
+22
+body_2.1.body.2.bias
+22
+body_2.2.body.0.weight
+22
+body_2.2.body.0.bias
+22
+body_2.2.body.2.weight
+22
+body_2.2.body.2.bias
+22
+body_2.3.body.0.weight
+22
+body_2.3.body.0.bias
+22
+body_2.3.body.2.weight
+22
+body_2.3.body.2.bias
+22
+body_2.4.body.0.weight
+22
+body_2.4.body.0.bias
+22
+body_2.4.body.2.weight
+22
+body_2.4.body.2.bias
+22
+body_2.5.body.0.weight
+22
+body_2.5.body.0.bias
+22
+body_2.5.body.2.weight
+22
+body_2.5.body.2.bias
+22
+body_2.6.body.0.weight
+22
+body_2.6.body.0.bias
+22
+body_2.6.body.2.weight
+22
+body_2.6.body.2.bias
+22
+body_2.7.body.0.weight
+22
+body_2.7.body.0.bias
+22
+body_2.7.body.2.weight
+22
+body_2.7.body.2.bias
+22
+body_2.8.body.0.weight
+22
+body_2.8.body.0.bias
+22
+body_2.8.body.2.weight
+22
+body_2.8.body.2.bias
+22
+body_2.9.body.0.weight
+22
+body_2.9.body.0.bias
+22
+body_2.9.body.2.weight
+22
+body_2.9.body.2.bias
+22
+body_2.10.body.0.weight
+22
+body_2.10.body.0.bias
+22
+body_2.10.body.2.weight
+22
+body_2.10.body.2.bias
+22
+body_2.11.body.0.weight
+22
+body_2.11.body.0.bias
+22
+body_2.11.body.2.weight
+22
+body_2.11.body.2.bias
+22
+body_2.12.body.0.weight
+22
+body_2.12.body.0.bias
+22
+body_2.12.body.2.weight
+22
+body_2.12.body.2.bias
+22
+body_2.13.body.0.weight
+22
+body_2.13.body.0.bias
+22
+body_2.13.body.2.weight
+22
+body_2.13.body.2.bias
+22
+body_2.14.body.0.weight
+22
+body_2.14.body.0.bias
+22
+body_2.14.body.2.weight
+22
+body_2.14.body.2.bias
+22
+body_2.15.body.0.weight
+22
+body_2.15.body.0.bias
+22
+body_2.15.body.2.weight
+22
+body_2.15.body.2.bias
+22
+body_2.16.weight
+22
+body_2.16.bias
+22
+tail_2.0.0.features.0.1.weight
+22
+tail_2.0.0.features.0.1.bias
+22
+tail_2.0.0.features.1.1.weight
+22
+tail_2.0.0.features.1.1.bias
+22
+tail_2.0.0.features.2.1.weight
+22
+tail_2.0.0.features.2.1.bias
+22
+tail_2.0.1.weight
+22
+tail_2.0.1.bias
+22
+tail_2.1.weight
+22
+tail_2.1.bias
+22
+Traceback (most recent call last):
+  File "main.py", line 16, in <module>
+    t = Trainer(my_loader, checkpoint, args)
+  File "/home/kky/kky/ntire2018_kky/EDSR-PyTorch-master/code/trainer.py", line 21, in __init__
+    self.model, self.loss, self.optimizer, self.scheduler = ckp.load()
+  File "/home/kky/kky/ntire2018_kky/EDSR-PyTorch-master/code/utils.py", line 80, in load
+    my_model = model(self.args).get_model()
+  File "/home/kky/kky/ntire2018_kky/EDSR-PyTorch-master/code/model/__init__.py", line 22, in get_model
+    my_model.load_state_dict_8_4(torch.load(self.args.pre_train_3))
+  File "/home/kky/anaconda3/lib/python3.6/site-packages/torch/serialization.py", line 259, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../experiment/EDSR_baseline_x8_4/model/model_297.pt'
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ sh demo.sh
+Preparing binary packages...
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_HR/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X8/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X4/pack.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X2/pack.pt
+Preparing binary packages...
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_HR/packv.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X8/packv.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X4/packv.pt
+	Loading /home/kky/Dongwon/SuperResolution/Data/NTIRE/DIV2K_decoded/DIV2K_train_LR_wavelet/X2/packv.pt
+Making model...
+Loading model from ../experiment/EDSR_baseline_x2_1/model/model_183.pt...
+Loading model from ../experiment/EDSR_baseline_x4_2/model/model_268.pt...
+Loading model from ../experiment/EDSR_baseline_x8_4/model/model_297.pt...
+sub_mean.weight
+11
+sub_mean.bias
+11
+add_mean.weight
+11
+add_mean.bias
+11
+head.0.weight
+11
+head.0.bias
+11
+body.0.body.0.weight
+11
+body.0.body.0.bias
+11
+body.0.body.2.weight
+11
+body.0.body.2.bias
+11
+body.1.body.0.weight
+11
+body.1.body.0.bias
+11
+body.1.body.2.weight
+11
+body.1.body.2.bias
+11
+body.2.body.0.weight
+11
+body.2.body.0.bias
+11
+body.2.body.2.weight
+11
+body.2.body.2.bias
+11
+body.3.body.0.weight
+11
+body.3.body.0.bias
+11
+body.3.body.2.weight
+11
+body.3.body.2.bias
+11
+body.4.body.0.weight
+11
+body.4.body.0.bias
+11
+body.4.body.2.weight
+11
+body.4.body.2.bias
+11
+body.5.body.0.weight
+11
+body.5.body.0.bias
+11
+body.5.body.2.weight
+11
+body.5.body.2.bias
+11
+body.6.body.0.weight
+11
+body.6.body.0.bias
+11
+body.6.body.2.weight
+11
+body.6.body.2.bias
+11
+body.7.body.0.weight
+11
+body.7.body.0.bias
+11
+body.7.body.2.weight
+11
+body.7.body.2.bias
+11
+body.8.body.0.weight
+11
+body.8.body.0.bias
+11
+body.8.body.2.weight
+11
+body.8.body.2.bias
+11
+body.9.body.0.weight
+11
+body.9.body.0.bias
+11
+body.9.body.2.weight
+11
+body.9.body.2.bias
+11
+body.10.body.0.weight
+11
+body.10.body.0.bias
+11
+body.10.body.2.weight
+11
+body.10.body.2.bias
+11
+body.11.body.0.weight
+11
+body.11.body.0.bias
+11
+body.11.body.2.weight
+11
+body.11.body.2.bias
+11
+body.12.body.0.weight
+11
+body.12.body.0.bias
+11
+body.12.body.2.weight
+11
+body.12.body.2.bias
+11
+body.13.body.0.weight
+11
+body.13.body.0.bias
+11
+body.13.body.2.weight
+11
+body.13.body.2.bias
+11
+body.14.body.0.weight
+11
+body.14.body.0.bias
+11
+body.14.body.2.weight
+11
+body.14.body.2.bias
+11
+body.15.body.0.weight
+11
+body.15.body.0.bias
+11
+body.15.body.2.weight
+11
+body.15.body.2.bias
+11
+body.16.weight
+11
+body.16.bias
+11
+tail.0.0.features.0.1.weight
+11
+tail.0.0.features.0.1.bias
+11
+tail.0.0.features.1.1.weight
+11
+tail.0.0.features.1.1.bias
+11
+tail.0.0.features.2.1.weight
+11
+tail.0.0.features.2.1.bias
+11
+tail.0.1.weight
+11
+tail.0.1.bias
+11
+tail.1.weight
+11
+tail.1.bias
+11
+head_2.0.weight
+22
+head_2.0.bias
+22
+body_2.0.body.0.weight
+22
+body_2.0.body.0.bias
+22
+body_2.0.body.2.weight
+22
+body_2.0.body.2.bias
+22
+body_2.1.body.0.weight
+22
+body_2.1.body.0.bias
+22
+body_2.1.body.2.weight
+22
+body_2.1.body.2.bias
+22
+body_2.2.body.0.weight
+22
+body_2.2.body.0.bias
+22
+body_2.2.body.2.weight
+22
+body_2.2.body.2.bias
+22
+body_2.3.body.0.weight
+22
+body_2.3.body.0.bias
+22
+body_2.3.body.2.weight
+22
+body_2.3.body.2.bias
+22
+body_2.4.body.0.weight
+22
+body_2.4.body.0.bias
+22
+body_2.4.body.2.weight
+22
+body_2.4.body.2.bias
+22
+body_2.5.body.0.weight
+22
+body_2.5.body.0.bias
+22
+body_2.5.body.2.weight
+22
+body_2.5.body.2.bias
+22
+body_2.6.body.0.weight
+22
+body_2.6.body.0.bias
+22
+body_2.6.body.2.weight
+22
+body_2.6.body.2.bias
+22
+body_2.7.body.0.weight
+22
+body_2.7.body.0.bias
+22
+body_2.7.body.2.weight
+22
+body_2.7.body.2.bias
+22
+body_2.8.body.0.weight
+22
+body_2.8.body.0.bias
+22
+body_2.8.body.2.weight
+22
+body_2.8.body.2.bias
+22
+body_2.9.body.0.weight
+22
+body_2.9.body.0.bias
+22
+body_2.9.body.2.weight
+22
+body_2.9.body.2.bias
+22
+body_2.10.body.0.weight
+22
+body_2.10.body.0.bias
+22
+body_2.10.body.2.weight
+22
+body_2.10.body.2.bias
+22
+body_2.11.body.0.weight
+22
+body_2.11.body.0.bias
+22
+body_2.11.body.2.weight
+22
+body_2.11.body.2.bias
+22
+body_2.12.body.0.weight
+22
+body_2.12.body.0.bias
+22
+body_2.12.body.2.weight
+22
+body_2.12.body.2.bias
+22
+body_2.13.body.0.weight
+22
+body_2.13.body.0.bias
+22
+body_2.13.body.2.weight
+22
+body_2.13.body.2.bias
+22
+body_2.14.body.0.weight
+22
+body_2.14.body.0.bias
+22
+body_2.14.body.2.weight
+22
+body_2.14.body.2.bias
+22
+body_2.15.body.0.weight
+22
+body_2.15.body.0.bias
+22
+body_2.15.body.2.weight
+22
+body_2.15.body.2.bias
+22
+body_2.16.weight
+22
+body_2.16.bias
+22
+tail_2.0.0.features.0.1.weight
+22
+tail_2.0.0.features.0.1.bias
+22
+tail_2.0.0.features.1.1.weight
+22
+tail_2.0.0.features.1.1.bias
+22
+tail_2.0.0.features.2.1.weight
+22
+tail_2.0.0.features.2.1.bias
+22
+tail_2.0.1.weight
+22
+tail_2.0.1.bias
+22
+tail_2.1.weight
+22
+tail_2.1.bias
+22
+head_4.0.weight
+33
+head_4.0.bias
+33
+body_4.0.body.0.weight
+33
+body_4.0.body.0.bias
+33
+body_4.0.body.2.weight
+33
+body_4.0.body.2.bias
+33
+body_4.1.body.0.weight
+33
+body_4.1.body.0.bias
+33
+body_4.1.body.2.weight
+33
+body_4.1.body.2.bias
+33
+body_4.2.body.0.weight
+33
+body_4.2.body.0.bias
+33
+body_4.2.body.2.weight
+33
+body_4.2.body.2.bias
+33
+body_4.3.body.0.weight
+33
+body_4.3.body.0.bias
+33
+body_4.3.body.2.weight
+33
+body_4.3.body.2.bias
+33
+body_4.4.body.0.weight
+33
+body_4.4.body.0.bias
+33
+body_4.4.body.2.weight
+33
+body_4.4.body.2.bias
+33
+body_4.5.body.0.weight
+33
+body_4.5.body.0.bias
+33
+body_4.5.body.2.weight
+33
+body_4.5.body.2.bias
+33
+body_4.6.body.0.weight
+33
+body_4.6.body.0.bias
+33
+body_4.6.body.2.weight
+33
+body_4.6.body.2.bias
+33
+body_4.7.body.0.weight
+33
+body_4.7.body.0.bias
+33
+body_4.7.body.2.weight
+33
+body_4.7.body.2.bias
+33
+body_4.8.body.0.weight
+33
+body_4.8.body.0.bias
+33
+body_4.8.body.2.weight
+33
+body_4.8.body.2.bias
+33
+body_4.9.body.0.weight
+33
+body_4.9.body.0.bias
+33
+body_4.9.body.2.weight
+33
+body_4.9.body.2.bias
+33
+body_4.10.body.0.weight
+33
+body_4.10.body.0.bias
+33
+body_4.10.body.2.weight
+33
+body_4.10.body.2.bias
+33
+body_4.11.body.0.weight
+33
+body_4.11.body.0.bias
+33
+body_4.11.body.2.weight
+33
+body_4.11.body.2.bias
+33
+body_4.12.body.0.weight
+33
+body_4.12.body.0.bias
+33
+body_4.12.body.2.weight
+33
+body_4.12.body.2.bias
+33
+body_4.13.body.0.weight
+33
+body_4.13.body.0.bias
+33
+body_4.13.body.2.weight
+33
+body_4.13.body.2.bias
+33
+body_4.14.body.0.weight
+33
+body_4.14.body.0.bias
+33
+body_4.14.body.2.weight
+33
+body_4.14.body.2.bias
+33
+body_4.15.body.0.weight
+33
+body_4.15.body.0.bias
+33
+body_4.15.body.2.weight
+33
+body_4.15.body.2.bias
+33
+body_4.16.weight
+33
+body_4.16.bias
+33
+tail_4.0.0.features.0.1.weight
+33
+tail_4.0.0.features.0.1.bias
+33
+tail_4.0.0.features.1.1.weight
+33
+tail_4.0.0.features.1.1.bias
+33
+tail_4.0.0.features.2.1.weight
+33
+tail_4.0.0.features.2.1.bias
+33
+tail_4.0.1.weight
+33
+tail_4.0.1.bias
+33
+tail_4.1.weight
+33
+tail_4.1.bias
+33
+	CUDA is ready!
+Preparing loss function...
+[{'type': 'L1', 'weight': 1.0, 'function': L1Loss(
+)}]
+[Epoch 1]	Learning rate: 1.00e-5
+[1600/16000]	[L1: 26.2845] 	64.7+3.3s
+[3200/16000]	[L1: 26.4253] 	60.6+2.5s
+[4800/16000]	[L1: 26.2807] 	61.1+2.5s
+[6400/16000]	[L1: 26.1685] 	62.2+2.6s
+[8000/16000]	[L1: 26.0910] 	62.5+2.7s
+[9600/16000]	[L1: 26.1333] 	62.7+2.9s
+[11200/16000]	[L1: 26.1462] 	62.8+2.7s
+[12800/16000]	[L1: 26.1300] 	63.0+2.9s
+[14400/16000]	[L1: 26.0548] 	63.1+2.8s
+[16000/16000]	[L1: 26.0446] 	63.0+2.8s
+
+Evaluation:
+[DIV2K_DW x8]	PSNR: 25.976 (Best: 25.976 from epoch 1)
+Time: 17.84s
+
+[Epoch 2]	Learning rate: 1.00e-5
+[1600/16000]	[L1: 26.0451] 	62.1+3.0s
+[3200/16000]	[L1: 26.2583] 	63.2+2.9s
+[4800/16000]	[L1: 26.1127] 	63.2+2.9s
+[6400/16000]	[L1: 25.9092] 	63.1+3.0s
+[8000/16000]	[L1: 25.9903] 	63.4+2.8s
+[9600/16000]	[L1: 25.7779] 	63.4+2.7s
+[11200/16000]	[L1: 25.7291] 	63.2+3.1s
+[12800/16000]	[L1: 25.7175] 	63.3+2.8s
+[14400/16000]	[L1: 25.7279] 	63.3+2.7s
+^Z
+[1]+  Stopped                 sh demo.sh
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ ls
+data           dataloader.pyc  demo.sh.save    __init__.py  main.py  option.py   preTrainer.py   preTrainer.pynano.save  preTrainer.py.save.1  template.py   tools       trainer.pyc  utils.pyc
+dataloader.py  demo.sh         demo.sh.save.1  loss         model    option.pyc  preTrainer.pyc  preTrainer.py.save      __pycache__           template.pyc  trainer.py  utils.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ cd data
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code/data$ ls
+common_DW.py  common_DW.pyc  common_DW.py.save  common_DW.py.save.1  common.py  DIV2K_DW.py  DIV2K_DW.pyc  DIV2K_jpeg.py  DIV2K.py  __init__.py  __init__.pyc  main_2.py  MyImage.py  __pycache__
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code/data$ nano DIV2K_DW.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code/data$ cd ..
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ ls
+data           dataloader.pyc  demo.sh.save    __init__.py  main.py  option.py   preTrainer.py   preTrainer.pynano.save  preTrainer.py.save.1  template.py   tools       trainer.pyc  utils.pyc
+dataloader.py  demo.sh         demo.sh.save.1  loss         model    option.pyc  preTrainer.pyc  preTrainer.py.save      __pycache__           template.pyc  trainer.py  utils.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ nano trainer.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ cd ..
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master$ ls
+code  code_8_1  experiment  README.md  test
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master$ cd code_8_1
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code_8_1$ ls
+data           dataloader.pyc  demo.sh.save    __init__.py  main.py  option.py   preTrainer.py   preTrainer.pynano.save  preTrainer.py.save.1  template.py   tools       trainer.pyc  utils.pyc
+dataloader.py  demo.sh         demo.sh.save.1  loss         model    option.pyc  preTrainer.pyc  preTrainer.py.save      __pycache__           template.pyc  trainer.py  utils.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code_8_1$ cd data
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code_8_1/data$ ls
+common_DW.py  common_DW.pyc  common_DW.py.save  common_DW.py.save.1  common.py  DIV2K_DW.py  DIV2K_DW.pyc  DIV2K_jpeg.py  DIV2K.py  __init__.py  __init__.pyc  main_2.py  MyImage.py  __pycache__
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code_8_1/data$ nano DIV2K_DW.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code_8_1/data$ cd ..
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code_8_1$ ls
+data           dataloader.pyc  demo.sh.save    __init__.py  main.py  option.py   preTrainer.py   preTrainer.pynano.save  preTrainer.py.save.1  template.py   tools       trainer.pyc  utils.pyc
+dataloader.py  demo.sh         demo.sh.save.1  loss         model    option.pyc  preTrainer.pyc  preTrainer.py.save      __pycache__           template.pyc  trainer.py  utils.py
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code_8_1$ cd ..
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master$ cd code
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code$ cd data
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code/data$ ls
+common_DW.py  common_DW.pyc  common_DW.py.save  common_DW.py.save.1  common.py  DIV2K_DW.py  DIV2K_DW.pyc  DIV2K_jpeg.py  DIV2K.py  __init__.py  __init__.pyc  main_2.py  MyImage.py  __pycache__
+kky@ubuntu:~/kky/ntire2018_kky/EDSR-PyTorch-master/code/data$ nano DIV2K_DW.py
+
+  GNU nano 2.2.6                                                                  File: DIV2K_DW.py                                                                                                                                           
+
+            else:
+                img_in = self.pack_in[self.idx_scale][idx].numpy()
+                img_tar = self.pack_tar[idx].numpy()
+
+                return img_in, img_tar,None,None
+
+    def _get_patch(self, img_in, img_tar,img_in4,img_in2):
+        if self.train:
+            if self.fullTrain:
+                scale = self.scale[self.idx_scale]
+                img_in, img_tar,img_in4,img_in2, pi = common_DW.get_patch(
+                        img_in, img_tar,img_in4,img_in2, self.args, scale)
+                img_in, img_tar,img_in4,img_in2, ai = common_DW.augment(img_in, img_tar,img_in4,img_in2)
+
+                return img_in, img_tar,img_in4,img_in2, pi, ai
+            else:
+                scale = int(self.fullInputScale[0])/int(self.fullTargetScale[0])
+                img_in, img_tar,img_in4,img_in2, pi = common_DW.get_patch_DW(
+                        img_in, img_tar, self.args, int(scale))
+                img_in, img_tar,img_in4,img_in2, ai = common_DW.augment_DW(img_in, img_tar)
+
+                return img_in, img_tar,None,None, pi, ai
+        else:
+            scale = self.scale[self.idx_scale] ##0209 revised.
+            ih, iw, c = img_in.shape
+            img_tar = img_tar[0:ih * scale, 0:iw * scale, :]
+
+            return img_in, img_tar, None, None,None,None
+
+    def _save_partition(self, dict_full, name):
+        dict_val = {}
+        for i in range(self.args.n_train, self.args.n_train + self.args.n_val):
+            dict_val[i + 1] = dict_full[i + 1]
+        torch.save(dict_val, name)
+
+    def set_scale(self, idx_scale):
+        self.idx_scale = idx_scale
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
