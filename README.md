@@ -9,8 +9,8 @@ PyTorch >= 0.3.1
 If you want to run the code, follow the steps below.
 
 #0.
-track1. bicubic x8
-The order of the test code files is
+track1. bicubic x8.
+The order of the test code files is.
 a). code_8_4.
 b). code 4_2_Final.
 c). code 2_1_Final.
@@ -27,8 +27,8 @@ a). code_4_4_DnCNN_track3_BN_Resnet_2.
 b). code 4_2_Final_3.
 c). code 2_1_Final_3.
 
-#1. Please (appath)set the data location in codex_x/data/MyImage.py
-#2. Modify dir in save_results function in codex_x/utils.py
+#1. Please (appath)set the data location in codex_x/data/MyImage.py.
+#2. Modify dir in save_results function in codex_x/utils.py.
 
 
 
