@@ -5,6 +5,33 @@ We plan to upload 'learned network for NTIRE competition (CVPRW 2018)' to other 
 Python (Tested with 3.6)
 PyTorch >= 0.3.1
 
+#Test
+If you want to run the code, follow the steps below.
+
+0.
+track1. bicubic x8
+The order of the test code files is
+a). code_8_4.
+b). code 4_2_Final.
+c). code 2_1_Final.
+
+track2. mild x4
+The order of the test code files is
+a). code_4_4_DnCNN_tack2_BN_Resnet.
+b). code 4_2_Final_2.
+c). code 2_1_Fianl_2.
+
+track3. difficult x4
+The order of the test code files is
+a). code_4_4_DnCNN_track3_BN_Resnet_2.
+b). code 4_2_Final_3.
+c). code 2_1_Final_3.
+
+1. Please (appath)set the data location in codex_x/data/MyImage.py
+2. Modify dir in save_results function in codex_x/utils.py
+
+
+
 # License
 You may freely use and distribute this software as long as you retain the author's name (myself and/or my students) with the software.
 It would also be courteous for you to cite the toolbox and any related publications in any papers that present results based on this software. A typical citation is like: Dongwon park, "MBSR," available at [url], downloaded [date].
