@@ -30,6 +30,36 @@ c). code 2_1_Final_3.
 #1. Please (appath)set the data location in codex_x/data/MyImage.py.
 #2. Modify dir in save_results function in codex_x/utils.py.
 
+########################################
+# Other Method 
+#EMBSR-PyTorch
+Experiment can get down here.
+
+
+This repository is the code for ‘Efficient Module based on Single Image Super Resolution tackling multiple problems’
+# Test Method
+Unzip the bicubic, mild, and difficult files and then enter code_2_1 in each folder. Then go into data and modify the location in MyImage.py.
+
+1. Execution
+ - Because our method is based on Module, you should train each module for train or test.
+
+1) Testing
+
+First, you should change the path of your data in /data/MyImage. Place your images in test folder. Test results are saved on /experiment/test/results. 
+
+As the method is modeled based approach, you should sequentially operate each module network.
+For example, in case of bicubic x8 problem, the sequence is x8 -> x4 ->x2 ->x1(SR).
+Firstly, you should make x4(SR) images from x8 images in the code_8_4
+Second, you make x2 images from x4(SR) in the code_4_2
+Finally, you make x1(SR) images form x2 images(SR) in the code_2_1.
+
+For exception,
+
+cd code_*       # You are now in */EMBSR-PyTorch/code
+sh demo.sh
+
+
+#######################################################################
 
 
 # License
