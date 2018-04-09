@@ -35,8 +35,7 @@ c). code 2_1_Final_3.
 
 # Second
 - EMBSR-PyTorch
-Experiment can get down here.
-# We will update this part soon.
+Experiment can get down here.(We will update this part soon.)
 
 
 This repository is the code for ‘Efficient Module based on Single Image Super Resolution tackling multiple problems’
