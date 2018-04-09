@@ -1,6 +1,8 @@
 We plan to upload 'learned network for NTIRE competition (CVPRW 2018)' to other places due to capacity.
 # Title : Efficient Module Based SR for multiple problems 
 # EMBSR
+If you want to run our code, we recommend two ways.
+# First
 # Dependencies
 Python (Tested with 3.6)
 PyTorch >= 0.3.1
@@ -30,8 +32,8 @@ c). code 2_1_Final_3.
 #1. Please (appath)set the data location in codex_x/data/MyImage.py.
 #2. Modify dir in save_results function in codex_x/utils.py.
 
+# Second
 ########################################
-# Other Method 
 #EMBSR-PyTorch
 Experiment can get down here.
 
